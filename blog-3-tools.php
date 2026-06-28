@@ -2,39 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MukulSharma.in || Full Stack Developer Resume</title>
+  <title>Tools for Web Development | Mukul Sharma</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167410650-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-167410650-1');
-</script>
+  <meta name="description" content="A practical collection of web development tools used by full stack developer Mukul Sharma.">
 
   <!-- Favicons -->
   <link href="img/m.svg" rel="icon">
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" href="lib/ionicons/css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="lib/font-awesome/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"></noscript>
+  <style><?php readfile(__DIR__ . '/lib/bootstrap/css/bootstrap.min.css'); readfile(__DIR__ . '/css/style.css'); ?>
+  @font-face{font-family:"Ionicons";src:url("lib/ionicons/fonts/ionicons.woff?v=2.0.0") format("woff");font-weight:normal;font-style:normal;font-display:swap}
+  @font-face{font-family:"FontAwesome";src:url("lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2");font-weight:normal;font-style:normal;font-display:swap}
+  </style>
 
 </head>
 
-<body>
+<body class="blog-page">
   <!--/ Nav Star /-->
   <?php 
   include'navbar.php';
@@ -42,17 +28,18 @@
   <!--/ Nav End /-->
 
   <!--/ Intro Skew Star /-->
-  <div class="intro intro-single route bg-image" style="background-image: url(img/overlay-bg.jpg)">
+  <div class="intro intro-single route blog-header-solid">
     <div class="overlay-mf"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h2 class="intro-title mb-4">Tools For Web Developement</h2>
+          <p class="blog-hero-kicker">A practical developer toolkit</p>
+          <h1 class="intro-title mb-4">Tools for Web Development</h1>
           <ol class="breadcrumb d-flex justify-content-center">
             <li class="breadcrumb-item">
-              <a href="#">Home</a>
+              <a href="index.php">Home</a>
             </li>
-            <li class="breadcrumb-item active">Blog</li>
+            <li class="breadcrumb-item active" aria-current="page">Blog</li>
           </ol>
         </div>
       </div>
@@ -67,18 +54,18 @@
         <div class="col-md-8">
           <div class="post-box">
             <div class="post-thumb">
-              <img src="img/post-3.jpg" class="img-fluid" alt="">
+              <img src="img/optimized/post-3.webp" width="720" height="479" class="img-fluid" alt="Web development workspace and tools" decoding="async">
             </div>
             <div class="post-meta">
-              <h1 class="article-title">Tools For Web Developement</h1>
+              <h2 class="article-title">Tools for Web Development</h2>
               <ul>
                 <li>
                   <span class="ion-ios-person"></span>
-                  <a href="#">Mukul Sharma</a>
+                  <a href="index.php#about">Mukul Sharma</a>
                 </li>
                 <li>
                   <span class="ion-pricetag"></span>
-                  <a href="#">Web Design</a>
+                  <span>Development</span>
                 </li>
                 
               </ul>
@@ -126,7 +113,7 @@
               </blockquote>
               <hr>
               <blockquote class="blockquote">
-                <p class="mb-0">I will Update More...........</p>
+                <p class="mb-0">This toolkit evolves as I discover better development workflows.</p>
               </blockquote>
             </div>
           </div>
@@ -140,26 +127,20 @@
           ?>
           
           <div class="widget-sidebar widget-tags">
-            <h5 class="sidebar-title">Tags</h5>
+            <h2 class="sidebar-title">Topics</h2>
             <div class="sidebar-content">
               <ul>
                 <li>
-                  <a href="#">Web.</a>
+                  <span>Development</span>
                 </li>
                 <li>
-                  <a href="#">Design.</a>
+                  <span>Productivity</span>
                 </li>
                 <li>
-                  <a href="#">Travel.</a>
+                  <span>Editors</span>
                 </li>
                 <li>
-                  <a href="#">Photoshop</a>
-                </li>
-                <li>
-                  <a href="#">Corel Draw</a>
-                </li>
-                <li>
-                  <a href="#">JavaScript</a>
+                  <span>Dev Tools</span>
                 </li>
               </ul>
             </div>
@@ -171,7 +152,7 @@
   <!--/ Section Blog-Single End /-->
 
   <!--/ Section Contact-Footer Star /-->
-  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route">
     <div class="overlay-mf"></div>
     <?php
     include'footer.php';
@@ -179,25 +160,9 @@
   </section>
   <!--/ Section Contact-footer End /-->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/counterup/jquery.waypoints.min.js"></script>
-  <script src="lib/counterup/jquery.counterup.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="lib/typed/typed.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script defer src="js/main.js?v=20260628c"></script>
 
 </body>
 </html>

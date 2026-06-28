@@ -5,7 +5,10 @@
   var menu = document.getElementById('navbarDefault');
   var toggler = document.querySelector('.navbar-toggler');
   var backToTop = document.querySelector('.back-to-top');
+  var preloader = document.getElementById('preloader');
   var navHeight = nav ? nav.offsetHeight : 0;
+
+  if (preloader) preloader.remove();
 
   function updateNavigation() {
     var reduced = window.scrollY > 50;

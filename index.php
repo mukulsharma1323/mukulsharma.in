@@ -505,7 +505,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-1-quotes.php"><img src="img/optimized/post-1.jpg" width="720" height="479" alt="My favourite quotes article" class="img-fluid" loading="lazy" decoding="async"></a>
+              <a href="blog-1-quotes.php"><img src="img/optimized/post-1.webp" width="720" height="479" alt="My favourite quotes article" class="img-fluid" loading="lazy" decoding="async"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -535,7 +535,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-2-books.php"><img src="img/optimized/work-3.jpg" width="720" height="450" alt="My favourite books article" class="img-fluid" loading="lazy" decoding="async"></a>
+              <a href="blog-2-books.php"><img src="img/optimized/work-3.webp" width="720" height="450" alt="My favourite books article" class="img-fluid" loading="lazy" decoding="async"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -565,7 +565,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-3-tools.php"><img src="img/optimized/post-3.jpg" width="720" height="479" alt="Web development tools article" class="img-fluid" loading="lazy" decoding="async"></a>
+              <a href="blog-3-tools.php"><img src="img/optimized/post-3.webp" width="720" height="479" alt="Web development tools article" class="img-fluid" loading="lazy" decoding="async"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -760,7 +760,7 @@
   <a href="#page-top" class="back-to-top" aria-label="Back to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
   <!-- Template Main Javascript File -->
-  <script defer src="js/main.js?v=20260628b"></script>
+  <script defer src="js/main.js?v=20260628c"></script>
   <script>
     window.addEventListener('load', function () {
       if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
