@@ -31,19 +31,7 @@ body {
 }
 
 .hero-image {
-  background-image: url('../img/optimized/intro-bg.jpg');
-}
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ionicons';
-  src: url('../lib/ionicons/fonts/ionicons.woff?v=2.0.0') format('woff');
-  font-display: swap;
+  background-image: url('img/optimized/intro-bg.webp');
 }
 
 img {

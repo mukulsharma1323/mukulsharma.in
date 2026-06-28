@@ -1,98 +1,111 @@
-(function ($) {
-	"use strict";
-	var nav = $('nav');
-  var navHeight = nav.outerHeight();
-  
-  $('.navbar-toggler').on('click', function() {
-    if( ! $('#mainNav').hasClass('navbar-reduce')) {
-      $('#mainNav').addClass('navbar-reduce');
-    }
-  })
+(function () {
+  'use strict';
 
-  // Preloader
-  $(window).on('load', function () {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function () {
-        $(this).remove();
-      });
+  var nav = document.querySelector('nav');
+  var menu = document.getElementById('navbarDefault');
+  var toggler = document.querySelector('.navbar-toggler');
+  var backToTop = document.querySelector('.back-to-top');
+  var navHeight = nav ? nav.offsetHeight : 0;
+
+  function updateNavigation() {
+    var reduced = window.scrollY > 50;
+    if (nav) {
+      nav.classList.toggle('navbar-reduce', reduced);
+      nav.classList.toggle('navbar-trans', !reduced);
     }
+    if (backToTop) backToTop.style.display = window.scrollY > 100 ? 'block' : 'none';
+  }
+
+  if (toggler && menu) {
+    toggler.addEventListener('click', function () {
+      var expanded = toggler.getAttribute('aria-expanded') === 'true';
+      toggler.setAttribute('aria-expanded', String(!expanded));
+      toggler.classList.toggle('collapsed', expanded);
+      menu.classList.toggle('show', !expanded);
+      if (nav) nav.classList.add('navbar-reduce');
+    });
+  }
+
+  document.querySelectorAll('a.js-scroll[href*="#"]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      var hash = link.hash;
+      if (!hash) return;
+      var target = document.querySelector(hash);
+      if (!target) return;
+      event.preventDefault();
+      window.scrollTo({ top: target.offsetTop - navHeight + 5, behavior: 'smooth' });
+      if (menu) menu.classList.remove('show');
+      if (toggler) {
+        toggler.classList.add('collapsed');
+        toggler.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
 
-  // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
+  if (backToTop) {
+    backToTop.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  var slider = document.querySelector('.text-slider');
+  var sliderItems = document.querySelector('.text-slider-items');
+  if (slider && sliderItems) {
+    var words = sliderItems.textContent.split(',');
+    var wordIndex = 0;
+    var characterIndex = 0;
+    var deleting = false;
+    var type = function () {
+      var word = words[wordIndex];
+      characterIndex += deleting ? -1 : 1;
+      slider.textContent = word.slice(0, Math.max(0, characterIndex));
+      var delay = deleting ? 30 : 80;
+      if (!deleting && characterIndex === word.length) {
+        deleting = true;
+        delay = 1100;
+      } else if (deleting && characterIndex === 0) {
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        delay = 180;
+      }
+      window.setTimeout(type, delay);
+    };
+    type();
+  }
+
+  var lightboxLoading;
+  function loadLightbox() {
+    if (lightboxLoading) return lightboxLoading;
+    lightboxLoading = new Promise(function (resolve, reject) {
+      var stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = 'lib/lightbox/css/lightbox.min.css';
+      document.head.appendChild(stylesheet);
+
+      var jquery = document.createElement('script');
+      jquery.src = 'lib/jquery/jquery.min.js';
+      jquery.onload = function () {
+        var lightbox = document.createElement('script');
+        lightbox.src = 'lib/lightbox/js/lightbox.min.js';
+        lightbox.onload = resolve;
+        lightbox.onerror = reject;
+        document.body.appendChild(lightbox);
+      };
+      jquery.onerror = reject;
+      document.body.appendChild(jquery);
+    });
+    return lightboxLoading;
+  }
+
+  document.querySelectorAll('a[data-lightbox]').forEach(function (link) {
+    link.addEventListener('click', function openAfterLoad(event) {
+      if (window.lightbox) return;
+      event.preventDefault();
+      loadLightbox().then(function () { link.click(); });
+    });
   });
-  $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-    return false;
-  });
 
-	/*--/ Star ScrollTop /--*/
-	$('.scrolltop-mf').on("click", function () {
-		$('html, body').animate({
-			scrollTop: 0
-		}, 1000);
-	});
-
-	/*--/ Star Scrolling nav /--*/
-	$('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if (target.length) {
-				$('html, body').animate({
-					scrollTop: (target.offset().top - navHeight + 5)
-				}, 1000, "easeInOutExpo");
-				return false;
-			}
-		}
-	});
-
-	// Closes responsive menu when a scroll trigger link is clicked
-	$('.js-scroll').on("click", function () {
-		$('.navbar-collapse').collapse('hide');
-	});
-
-	// Activate scrollspy to add active class to navbar items on scroll
-	$('body').scrollspy({
-		target: '#mainNav',
-		offset: navHeight
-	});
-	/*--/ End Scrolling nav /--*/
-
-	/*--/ Navbar Menu Reduce /--*/
-	$(window).trigger('scroll');
-	$(window).on('scroll', function () {
-		var pixels = 50; 
-		var top = 1200;
-		if ($(window).scrollTop() > pixels) {
-			$('.navbar-expand-md').addClass('navbar-reduce');
-			$('.navbar-expand-md').removeClass('navbar-trans');
-		} else {
-			$('.navbar-expand-md').addClass('navbar-trans');
-			$('.navbar-expand-md').removeClass('navbar-reduce');
-		}
-		if ($(window).scrollTop() > top) {
-			$('.scrolltop-mf').fadeIn(1000, "easeInOutExpo");
-		} else {
-			$('.scrolltop-mf').fadeOut(1000, "easeInOutExpo");
-		}
-	});
-
-	/*--/ Star Typed /--*/
-	if ($('.text-slider').length == 1) {
-    var typed_strings = $('.text-slider-items').text();
-		var typed = new Typed('.text-slider', {
-			strings: typed_strings.split(','),
-			typeSpeed: 80,
-			loop: true,
-			backDelay: 1100,
-			backSpeed: 30
-		});
-	}
-
-})(jQuery);
+  updateNavigation();
+  window.addEventListener('scroll', updateNavigation, { passive: true });
+})();

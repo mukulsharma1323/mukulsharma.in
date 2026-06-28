@@ -15,18 +15,15 @@
   <meta property="og:image" content="https://mukulsharma.in/img/intro-bg.jpg">
   <link href="img/m.svg" rel="icon">
   <link href="img/m.svg" rel="apple-touch-icon">
-  <link rel="preload" href="img/optimized/intro-bg.jpg" as="image" fetchpriority="high">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css?v=20260628" rel="stylesheet">
+  <link rel="preload" href="img/optimized/intro-bg.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="lib/ionicons/css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" href="lib/font-awesome/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"></noscript>
+  <style><?php readfile(__DIR__ . '/lib/bootstrap/css/bootstrap.min.css'); readfile(__DIR__ . '/css/style.css'); ?>
+  @font-face{font-family:"Ionicons";src:url("lib/ionicons/fonts/ionicons.woff?v=2.0.0") format("woff");font-weight:normal;font-style:normal;font-display:swap}
+  @font-face{font-family:"FontAwesome";src:url("lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2");font-weight:normal;font-style:normal;font-display:swap}
+  </style>
 
 
   <style type="text/css">
@@ -87,7 +84,7 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
-                      <img src="img/optimized/profile.jpg" width="480" height="419" class="img-fluid rounded b-shadow-a" alt="Portrait of Mukul Sharma" loading="lazy" decoding="async">
+                      <img src="img/optimized/profile.webp" width="480" height="419" class="img-fluid rounded b-shadow-a" alt="Portrait of Mukul Sharma" loading="lazy" decoding="async">
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-7">
@@ -530,7 +527,7 @@
             <div class="card-footer">
               <div class="post-author">
                 <a href="blog-1-quotes.php">
-                  <img src="img/optimized/profile.jpg" width="32" height="32" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
+                  <img src="img/optimized/profile-avatar.webp" width="32" height="28" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
                   <span class="author">Mukul Sharma</span>
                 </a>
               </div>
@@ -559,7 +556,7 @@
             <div class="card-footer">
               <div class="post-author">
                 <a href="blog-2-books.php">
-                  <img src="img/optimized/profile.jpg" width="32" height="32" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
+                  <img src="img/optimized/profile-avatar.webp" width="32" height="28" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
                   <span class="author">Mukul Sharma</span>
                 </a>
               </div>
@@ -588,7 +585,7 @@
             <div class="card-footer">
               <div class="post-author">
                 <a href="blog-3-tools.php">
-                  <img src="img/optimized/profile.jpg" width="32" height="32" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
+                  <img src="img/optimized/profile-avatar.webp" width="32" height="28" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
                   <span class="author">Mukul Sharma</span>
                 </a>
               </div>
@@ -616,15 +613,8 @@
 
   <a href="#page-top" class="back-to-top" aria-label="Back to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script defer src="lib/jquery/jquery.min.js"></script>
-  <script defer src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script defer src="lib/easing/easing.min.js"></script>
-  <script defer src="lib/lightbox/js/lightbox.min.js"></script>
-  <script defer src="lib/typed/typed.min.js"></script>
-
   <!-- Template Main Javascript File -->
-  <script defer src="js/main.js?v=20260628"></script>
+  <script defer src="js/main.js?v=20260628b"></script>
   <script>
     window.addEventListener('load', function () {
       if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
