@@ -104,9 +104,9 @@
                 </div>
                 <div class="skill-mf">
                   <div class="title-box-2">
-                    <h5 class="title-left">
+                    <h2 class="title-left">
                       Skills
-                    </h5>
+                    </h2>
                   </div> 
                   <div class="tags">
                     <span class="btn-warning">HTML</span>
@@ -128,9 +128,9 @@
               <div class="col-md-6">
                 <div class="about-me pt-4 pt-md-0">
                   <div class="title-box-2">
-                    <h5 class="title-left">
+                    <h2 class="title-left">
                       About me
-                    </h5>
+                    </h2>
                   </div>
                   <p class="lead">Experienced Web Developer with a demonstrated history of working in the information technology 
                     and services industry. Skilled in PHP, SQL, Apache, Angular 2, Node.js and Linux. Strong knowledge of websites
@@ -516,7 +516,7 @@
             <div class="card-body">
               <div class="card-category-box">
                 <div class="card-category">
-                  <h6 class="category">Philosopy</h6>
+                  <p class="category">Philosopy</p>
                 </div>
               </div>
               <h3 class="card-title"><a href="blog-1-quotes.php">My Favourite Quotes</a></h3>
@@ -545,7 +545,7 @@
             <div class="card-body">
               <div class="card-category-box">
                 <div class="card-category">
-                  <h6 class="category">General</h6>
+                  <p class="category">General</p>
                 </div>
               </div>
               <h3 class="card-title"><a href="blog-2-books.php">My Favourite Books</a></h3>
@@ -574,7 +574,7 @@
             <div class="card-body">
               <div class="card-category-box">
                 <div class="card-category">
-                  <h6 class="category">Web Design</h6>
+                  <p class="category">Web Design</p>
                 </div>
               </div>
               <h3 class="card-title"><a href="blog-3-tools.php">Tools For Web Developement</a></h3>
