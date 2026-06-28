@@ -510,13 +510,14 @@
             <div class="card-body">
               <div class="card-category-box">
                 <div class="card-category">
-                  <p class="category">Philosopy</p>
+                  <p class="category">Philosophy</p>
                 </div>
               </div>
               <h3 class="card-title"><a href="blog-1-quotes.php">My Favourite Quotes</a></h3>
               <p class="card-description">
-                Here is list of my favourite quotes, some of these quotes are from famous people, books or movies.
+                A curated collection of memorable ideas from influential people, books and films.
               </p>
+              <a class="card-read-more" href="blog-1-quotes.php" aria-label="Read article: My Favourite Quotes">Read article <span aria-hidden="true">→</span></a>
             </div>
             <div class="card-footer">
               <div class="post-author">
@@ -544,8 +545,9 @@
               </div>
               <h3 class="card-title"><a href="blog-2-books.php">My Favourite Books</a></h3>
               <p class="card-description">
-                Here is a list of my favourite books, some of these are very popular.<br><br>
+                Books that shaped how I think about technology, work, creativity and personal growth.
               </p>
+              <a class="card-read-more" href="blog-2-books.php" aria-label="Read article: My Favourite Books">Read article <span aria-hidden="true">→</span></a>
             </div>
             <div class="card-footer">
               <div class="post-author">
@@ -571,10 +573,11 @@
                   <p class="category">Web Design</p>
                 </div>
               </div>
-              <h3 class="card-title"><a href="blog-3-tools.php">Tools For Web Developement</a></h3>
+              <h3 class="card-title"><a href="blog-3-tools.php">Tools for Web Development</a></h3>
               <p class="card-description">
-                Tools make you more productive and makes web development fast, Here is a list of tools which I use for Web development.
+                A practical selection of tools that improve productivity and make web development faster.
               </p>
+              <a class="card-read-more" href="blog-3-tools.php" aria-label="Read article: Tools for Web Development">Read article <span aria-hidden="true">→</span></a>
             </div>
             <div class="card-footer">
               <div class="post-author">
