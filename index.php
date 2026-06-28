@@ -9,7 +9,7 @@ $homePosts = blog_all(false, 3);
   <title>Mukul Sharma | Full Stack Developer</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="theme-color" content="#0078ff">
-  <meta name="description" content="Portfolio of Mukul Sharma, a full stack developer specializing in PHP, Node.js, Angular, responsive web applications, APIs and cloud technologies.">
+  <meta name="description" content="Portfolio of Mukul Sharma, a Full Stack Developer specializing in PHP, Node.js, Angular, responsive web applications, APIs and cloud technologies.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mukulsharma.in/">
   <meta property="og:title" content="Mukul Sharma | Full Stack Developer">
@@ -84,12 +84,12 @@ $homePosts = blog_all(false, 3);
                   <div class="col-sm-6 col-md-7">
                     <div class="about-info">
                       <p><span class="title-s">Name: </span> <span>Mukul Sharma</span></p>
-                      <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
+                      <p><span class="title-s">Profile: </span> <span>Full Stack Developer</span></p>
                       <p><span class="title-s">Email: </span> <span>mukulsharma1323@gmail.com</span></p>
                       <div class="socials" style="padding: 0px !important">
                           <ul>
                             <li><a href="https://www.linkedin.com/in/mukulsharma1323" aria-label="Mukul Sharma on LinkedIn"><span class="ico-circle" aria-hidden="true"><i class="ion-social-linkedin"></i></span></a></li>
-                            <li><a href="https://www.facebook.com/mukulsharma1323" aria-label="Mukul Sharma on Facebook"><span class="ico-circle" aria-hidden="true"><i class="ion-social-facebook"></i></span></a></li>
+                            <li><a href="https://github.com/mukulsharma1323/" aria-label="Mukul Sharma on GitHub"><span class="ico-circle" aria-hidden="true"><i class="ion-social-github"></i></span></a></li>
                             <li><a href="https://www.instagram.com/mukulsharma1323/" aria-label="Mukul Sharma on Instagram"><span class="ico-circle" aria-hidden="true"><i class="ion-social-instagram"></i></span></a></li>
                           </ul>
                       </div>
