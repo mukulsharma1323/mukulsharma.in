@@ -724,6 +724,39 @@ a:hover {
   color: #4e4e4e;
 }
 
+.tags .skill-chip {
+  display: inline-block;
+  margin: 0 .25rem .5rem 0;
+  padding: .38rem .7rem;
+  color: #0056b3;
+  background: #fff;
+  border: 1px solid #a9caed;
+  border-radius: .3rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+  font-size: .86rem;
+  font-weight: 600;
+  line-height: 1.35;
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.tags .skill-chip::after {
+  content: ' ↗';
+  font-size: .75em;
+}
+
+.tags .skill-chip:hover,
+.tags .skill-chip:focus-visible {
+  color: #fff;
+  background: #0056b3;
+  border-color: #0056b3;
+  text-decoration: none;
+}
+
+.tags .skill-chip:focus-visible {
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
 .skill-mf .progress {
   background-color: #cde1f8;
   margin: .5rem 0 1.2rem 0;
@@ -745,6 +778,8 @@ a:hover {
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
+  height: calc(100% - 3rem);
+  width: 100%;
 }
 
 .service-box:hover .ico-circle {
@@ -951,6 +986,143 @@ a:hover {
   color: #4e4e4e;
   display: inline-block;
   float: right;
+}
+
+/*======================================
+//--//-->   EXPERIENCE TIMELINE
+======================================*/
+
+.experience-mf {
+  padding-bottom: 1rem;
+}
+
+.experience-timeline {
+  position: relative;
+  padding: .5rem 0;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #cde1f8;
+  transform: translateX(-50%);
+}
+
+.experience-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.experience-marker {
+  grid-column: 2;
+  grid-row: 1;
+  width: 18px;
+  height: 18px;
+  margin: 1.5rem auto 0;
+  background: #fff;
+  border: 5px solid #0062cc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #cde1f8;
+  z-index: 2;
+}
+
+.experience-card {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: .75rem;
+  border-top: 4px solid #0062cc;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .09);
+}
+
+.experience-item:nth-child(even) .experience-card {
+  grid-column: 3;
+}
+
+.experience-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .55rem;
+}
+
+.experience-role {
+  margin: 0 0 .25rem;
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+.experience-company {
+  margin: 0;
+  color: #0056b3;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.experience-duration {
+  flex: 0 0 auto;
+  padding: .3rem .65rem;
+  color: #fff;
+  background: #0062cc;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .9rem;
+  margin-bottom: 1rem;
+  color: #595959;
+  font-size: .86rem;
+}
+
+.experience-meta span:not(:last-child)::after {
+  content: '•';
+  padding-left: .9rem;
+  color: #767676;
+}
+
+.experience-points {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.experience-points li {
+  margin-bottom: .55rem;
+  line-height: 1.55;
+}
+
+.experience-points li::marker {
+  color: #0062cc;
+}
+
+.experience-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.experience-stack span {
+  padding: .25rem .55rem;
+  color: #343a40;
+  background: #e9f3ff;
+  border: 1px solid #c5ddf7;
+  border-radius: .25rem;
+  font-size: .76rem;
+  font-weight: 600;
 }
 
 /*======================================
@@ -1308,6 +1480,53 @@ footer .credits a {
 
   .intro .intro-subtitle {
     font-size: 1.5rem;
+  }
+
+  .experience-timeline::before {
+    left: 15px;
+  }
+
+  .experience-item {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 1.75rem;
+  }
+
+  .experience-marker {
+    grid-column: 1;
+    margin-top: 1.35rem;
+  }
+
+  .experience-card,
+  .experience-item:nth-child(even) .experience-card {
+    grid-column: 2;
+  }
+
+  .experience-card {
+    padding: 1.15rem;
+  }
+
+  .experience-card-head {
+    display: block;
+  }
+
+  .experience-duration {
+    display: inline-block;
+    margin-top: .65rem;
+  }
+
+  .experience-meta {
+    display: block;
+  }
+
+  .experience-meta span {
+    display: block;
+    margin-bottom: .25rem;
+  }
+
+  .experience-meta span:not(:last-child)::after {
+    content: '';
+    padding: 0;
   }
 
   .back-to-top {

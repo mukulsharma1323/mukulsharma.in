@@ -1,4 +1,4 @@
- <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+ <nav class="navbar navbar-b navbar-trans navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll" href="index.php" aria-label="MukulSharma.in home">MukulSharma.in</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
@@ -16,13 +16,16 @@
             <a class="nav-link js-scroll" href="./#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="./#service">Skills</a>
+            <a class="nav-link js-scroll" href="./#service">Expertise</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="./#work">Portfolio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="./#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="./#experience">Experience</a>
           </li>
         </ul>
       </div>
