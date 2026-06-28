@@ -14,6 +14,53 @@ body {
   color: #4e4e4e;
 }
 
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 10000;
+  padding: .65rem 1rem;
+  color: #fff;
+  background: #005fcc;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  color: #fff;
+  transform: translateY(0);
+}
+
+.hero-image {
+  background-image: url('../img/optimized/intro-bg.jpg');
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ionicons';
+  src: url('../lib/ionicons/fonts/ionicons.woff?v=2.0.0') format('woff');
+  font-display: swap;
+}
+
+img {
+  height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -112,6 +159,7 @@ a:hover {
   width: 100%;
   height: 100%;
   display: table;
+  table-layout: fixed;
 }
 
 .table-cell {
@@ -1265,6 +1313,15 @@ footer .credits a {
 }
 
 @media (max-width: 768px) {
+  .intro .intro-title {
+    font-size: 2.25rem;
+    line-height: 1.15;
+  }
+
+  .intro .intro-subtitle {
+    font-size: 1.5rem;
+  }
+
   .back-to-top {
     bottom: 15px;
   }

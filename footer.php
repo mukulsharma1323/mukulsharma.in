@@ -4,7 +4,7 @@
           <div class="col-sm-12">
             <div class="copyright-box">
               <div class="credits">
-                Designed and Developed by <a href="http://mukulsharma.in/">Mukul Sharma</a>
+                Designed and Developed by <a href="https://mukulsharma.in/">Mukul Sharma</a>
               </div>
             </div>
           </div>

@@ -2,39 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MukulSharma.in || Full Stack Developer Resume</title>
+  <title>Mukul Sharma | Full Stack Developer</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167410650-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-167410650-1');
-</script>
-
+  <meta name="theme-color" content="#0078ff">
+  <meta name="description" content="Portfolio of Mukul Sharma, a full stack developer specializing in PHP, Node.js, Angular, responsive web applications, APIs and cloud technologies.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mukulsharma.in/">
+  <meta property="og:title" content="Mukul Sharma | Full Stack Developer">
+  <meta property="og:description" content="Explore Mukul Sharma's full stack development skills, selected projects and articles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mukulsharma.in/">
+  <meta property="og:image" content="https://mukulsharma.in/img/intro-bg.jpg">
   <link href="img/m.svg" rel="icon">
   <link href="img/m.svg" rel="apple-touch-icon">
+  <link rel="preload" href="img/optimized/intro-bg.jpg" as="image" fetchpriority="high">
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css?v=20260628" rel="stylesheet">
 
 
   <style type="text/css">
-    .tags a{border:1px solid #DDD;display:inline-block;color:#717171;background:#FFF;-webkit-box-shadow:0 1px 1px 0 rgba(180,180,180,0.1);box-shadow:0 1px 1px 0 rgba(180,180,180,0.1);-webkit-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;-o-transition:all .1s ease-in-out;-ms-transition:all .1s ease-in-out;transition:all .1s ease-in-out;border-radius:2px;margin:0 3px 6px 0;padding:5px 10px}
+    .tags a,.tags span{border:1px solid #DDD;display:inline-block;color:#717171;background:#FFF;-webkit-box-shadow:0 1px 1px 0 rgba(180,180,180,0.1);box-shadow:0 1px 1px 0 rgba(180,180,180,0.1);-webkit-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;-o-transition:all .1s ease-in-out;-ms-transition:all .1s ease-in-out;transition:all .1s ease-in-out;border-radius:2px;margin:0 3px 6px 0;padding:5px 10px}
       .tags a:hover{border-color:#08C;}
       .tags a.primary{color:#FFF;background-color:#428BCA;border-color:#357EBD}
       .tags a.success{color:#FFF;background-color:#5CB85C;border-color:#4CAE4C}
@@ -58,6 +54,7 @@
 </head>
 
 <body id="page-top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!--/ Nav Star /-->
   <?php 
@@ -66,7 +63,8 @@
   <!--/ Nav End /-->
 
   <!--/ Intro Skew Star /-->
-  <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg.jpg)">
+  <main id="main-content">
+  <div id="home" class="intro route bg-image hero-image">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -89,7 +87,7 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
-                      <img src="img/profile.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                      <img src="img/optimized/profile.jpg" width="480" height="419" class="img-fluid rounded b-shadow-a" alt="Portrait of Mukul Sharma" loading="lazy" decoding="async">
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-7">
@@ -97,15 +95,13 @@
                       <p><span class="title-s">Name: </span> <span>Mukul Sharma</span></p>
                       <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
                       <p><span class="title-s">Email: </span> <span>hello@mukulsharma.in</span></p>
-                      <p>
-                        <div class="socials" style="padding: 0px !important">
+                      <div class="socials" style="padding: 0px !important">
                           <ul>
-                            <li><a href="https://www.linkedin.com/in/mukulsharma1323"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
-                            <li><a href="https://www.facebook.com/mukulsharma1323"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                            <li><a href="https://www.instagram.com/mukulsharma1323/"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                            <li><a href="https://www.linkedin.com/in/mukulsharma1323" aria-label="Mukul Sharma on LinkedIn"><span class="ico-circle" aria-hidden="true"><i class="ion-social-linkedin"></i></span></a></li>
+                            <li><a href="https://www.facebook.com/mukulsharma1323" aria-label="Mukul Sharma on Facebook"><span class="ico-circle" aria-hidden="true"><i class="ion-social-facebook"></i></span></a></li>
+                            <li><a href="https://www.instagram.com/mukulsharma1323/" aria-label="Mukul Sharma on Instagram"><span class="ico-circle" aria-hidden="true"><i class="ion-social-instagram"></i></span></a></li>
                           </ul>
-                        </div>
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -116,19 +112,19 @@
                     </h5>
                   </div> 
                   <div class="tags">
-                    <a href="" class="btn-warning">HTML</a> 
-                    <a href="" class="btn-info">CSS</a> 
-                    <a href="" class="btn-danger">Bootstrap</a>
-                    <a href="" class="btn-warning">PHP</a> 
-                    <a href="" class="btn-success">MySQL</a>
-                    <a href="" class="btn-primary">JavaScript</a>
-                    <a href="" class="btn-danger">jQuery</a> 
-                    <a href="" class="btn-danger">Node js</a>
-                    <a href="" class="btn-warning">Express js</a> 
-                    <a href="" class="btn-info">MongoDB</a> 
-                    <a href="" class="btn-primary">Angular</a> 
-                    <a href="" class="btn-success">AWS</a>
-                    <a href="" class="btn-primary">Google APIs</a> 
+                    <span class="btn-warning">HTML</span>
+                    <span class="btn-info">CSS</span>
+                    <span class="btn-danger">Bootstrap</span>
+                    <span class="btn-warning">PHP</span>
+                    <span class="btn-success">MySQL</span>
+                    <span class="btn-primary">JavaScript</span>
+                    <span class="btn-danger">jQuery</span>
+                    <span class="btn-danger">Node js</span>
+                    <span class="btn-warning">Express js</span>
+                    <span class="btn-info">MongoDB</span>
+                    <span class="btn-primary">Angular</span>
+                    <span class="btn-success">AWS</span>
+                    <span class="btn-primary">Google APIs</span>
                 </div>
               </div>
               </div>
@@ -278,16 +274,16 @@
           <div class="work-box">
             <a href="img/portfolio/react-datatable.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/react-datatable.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/react-datatable.jpg" width="720" height="336" alt="React data table project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    </br></br>
+                    <br><br>
                     <h2 class="w-title">React Data Table</h2>
                     <div class="w-more">
-                    </a>
-                      <a href="https://admin-table-ui.netlify.app/" target="blank"> <span class="w-ctegory">Demo</span></a> / <span class="w-date">React</span>
+                      <a href="https://admin-table-ui.netlify.app/" target="_blank" rel="noopener noreferrer"><span class="w-ctegory">Demo</span></a> / <span class="w-date">React</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -303,15 +299,15 @@
           <div class="work-box">
             <a href="img/portfolio/isee.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/isee.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/isee.jpg" width="720" height="405" alt="ISEE Analytics project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
                     <h2 class="w-title">ISEE Analytics</h2>
                     <div class="w-more">
-                    </a>
-                      <a href="https://i2l.solutions/" target="blank"> <span class="w-ctegory">Demo</span></a> / <span class="w-date">Angular Nodejs</span>
+                      <a href="https://i2l.solutions/" target="_blank" rel="noopener noreferrer"><span class="w-ctegory">Demo</span></a> / <span class="w-date">Angular Nodejs</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -327,16 +323,16 @@
           <div class="work-box">
             <a href="img/portfolio/login-demo.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/login-demo.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/login-demo.jpg" width="720" height="338" alt="Authentication project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    </br></br>
+                    <br><br>
                     <h2 class="w-title">Authentication</h2>
                     <div class="w-more">
-                    </a>
-                      <a href="http://mukulsharma.in/login-demo/" target="blank"> <span class="w-ctegory">Demo</span></a> / <span class="w-date">PHP Authentication</span>
+                      <a href="https://mukulsharma.in/login-demo/" target="_blank" rel="noopener noreferrer"><span class="w-ctegory">Demo</span></a> / <span class="w-date">PHP Authentication</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -352,15 +348,15 @@
           <div class="work-box">
             <a href="img/portfolio/1.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/1.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/1.jpg" width="720" height="405" alt="DNH News project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
                     <h2 class="w-title">DNH News</h2>
                     <div class="w-more">
-                    </a>
-                      <a href=""> <span class="w-ctegory">Web Design</span></a> / <span class="w-date">Wordpress</span>
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">Wordpress</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -376,15 +372,15 @@
           <div class="work-box">
             <a href="img/portfolio/7.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/7.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/7.jpg" width="720" height="405" alt="Android application API project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
                     <h2 class="w-title">API For Android App</h2>
                     <div class="w-more">
-                    </a>
-                    <a href="">  <span class="w-ctegory">API</span></a> / <span class="w-date">PHP</span>
+                    <span class="w-ctegory">API</span> / <span class="w-date">PHP</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -400,8 +396,9 @@
           <div class="work-box">
             <a href="img/portfolio/3.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/3.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/3.jpg" width="720" height="405" alt="Hospital management system project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
@@ -417,22 +414,21 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="work-box">
             <a href="img/portfolio/4.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/4.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/4.jpg" width="720" height="405" alt="Industry Mall project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
                     <h2 class="w-title">Industurymall.in</h2>
                     <div class="w-more">
-                      </a>
-                    <a href="">  <span class="w-ctegory">E-Commerce</span></a> / <span class="w-date">Wordpress</span>
+                    <span class="w-ctegory">E-Commerce</span> / <span class="w-date">Wordpress</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -448,15 +444,15 @@
           <div class="work-box">
             <a href="img/portfolio/5.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/5.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/5.jpg" width="720" height="405" alt="Machine Cloud project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
                     <h2 class="w-title">Machine Cloud</h2>
                     <div class="w-more">
-                      </a>
-                    <a href="">  <span class="w-ctegory">CMS</span></a> / <span class="w-date">PHP</span>
+                    <span class="w-ctegory">CMS</span> / <span class="w-date">PHP</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -472,15 +468,15 @@
           <div class="work-box">
             <a href="img/portfolio/6.png" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/portfolio/6.png" alt="" class="img-fluid">
+                <img src="img/optimized/portfolio/6.jpg" width="720" height="405" alt="Electric Studio project preview" class="img-fluid" loading="lazy" decoding="async">
               </div>
+            </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
                     <h2 class="w-title">Electric Studio</h2>
                     <div class="w-more">
-                      </a>
-                    <a href="">  <span class="w-ctegory">CMS</span></a> / <span class="w-date">Nodejs</span>
+                    <span class="w-ctegory">CMS</span> / <span class="w-date">Nodejs</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -518,7 +514,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-1-quotes.php"><img src="img/post-1.jpg" alt="" class="img-fluid"></a>
+              <a href="blog-1-quotes.php"><img src="img/optimized/post-1.jpg" width="720" height="479" alt="My favourite quotes article" class="img-fluid" loading="lazy" decoding="async"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -534,7 +530,7 @@
             <div class="card-footer">
               <div class="post-author">
                 <a href="blog-1-quotes.php">
-                  <img src="img/profile.jpg" alt="" class="avatar rounded-circle">
+                  <img src="img/optimized/profile.jpg" width="32" height="32" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
                   <span class="author">Mukul Sharma</span>
                 </a>
               </div>
@@ -547,7 +543,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-2-books.php"><img src="img/work-3.jpg" alt="" class="img-fluid"></a>
+              <a href="blog-2-books.php"><img src="img/optimized/work-3.jpg" width="720" height="450" alt="My favourite books article" class="img-fluid" loading="lazy" decoding="async"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -563,7 +559,7 @@
             <div class="card-footer">
               <div class="post-author">
                 <a href="blog-2-books.php">
-                  <img src="img/profile.jpg" alt="" class="avatar rounded-circle">
+                  <img src="img/optimized/profile.jpg" width="32" height="32" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
                   <span class="author">Mukul Sharma</span>
                 </a>
               </div>
@@ -576,7 +572,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-3-tools.php"><img src="img/post-3.jpg" alt="" class="img-fluid"></a>
+              <a href="blog-3-tools.php"><img src="img/optimized/post-3.jpg" width="720" height="479" alt="Web development tools article" class="img-fluid" loading="lazy" decoding="async"></a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -592,7 +588,7 @@
             <div class="card-footer">
               <div class="post-author">
                 <a href="blog-3-tools.php">
-                  <img src="img/profile.jpg" alt="" class="avatar rounded-circle">
+                  <img src="img/optimized/profile.jpg" width="32" height="32" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
                   <span class="author">Mukul Sharma</span>
                 </a>
               </div>
@@ -616,25 +612,36 @@
     ?>
   </section>
   <!--/ Section Contact-footer End /-->
+  </main>
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <a href="#page-top" class="back-to-top" aria-label="Back to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/counterup/jquery.waypoints.min.js"></script>
-  <script src="lib/counterup/jquery.counterup.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="lib/typed/typed.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script defer src="lib/jquery/jquery.min.js"></script>
+  <script defer src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script defer src="lib/easing/easing.min.js"></script>
+  <script defer src="lib/lightbox/js/lightbox.min.js"></script>
+  <script defer src="lib/typed/typed.min.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script defer src="js/main.js?v=20260628"></script>
+  <script>
+    window.addEventListener('load', function () {
+      if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
+      var loadAnalytics = function () {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', 'UA-167410650-1');
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-167410650-1';
+        document.head.appendChild(script);
+      };
+      if ('requestIdleCallback' in window) requestIdleCallback(loadAnalytics, { timeout: 3000 });
+      else setTimeout(loadAnalytics, 2000);
+    }, { once: true });
+  </script>
 
 </body>
 </html>
