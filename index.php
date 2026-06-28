@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . '/includes/blog-repository.php';
+$homePosts = blog_all(false, 3);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -502,97 +506,27 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="blog-1-quotes.php"><img src="img/optimized/post-1.webp" width="720" height="479" alt="My favourite quotes article" class="img-fluid" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <p class="category">Philosophy</p>
-                </div>
+        <?php foreach ($homePosts as $post): $postUrl = 'blogs/' . $post['slug']; ?>
+          <div class="col-md-4">
+            <article class="card card-blog">
+              <div class="card-img">
+                <a href="<?= blog_e($postUrl) ?>"><img src="<?= blog_e($post['image_path']) ?>" width="720" height="450" alt="<?= blog_e($post['image_alt']) ?>" class="img-fluid" loading="lazy" decoding="async"></a>
               </div>
-              <h3 class="card-title"><a href="blog-1-quotes.php">My Favourite Quotes</a></h3>
-              <p class="card-description">
-                A curated collection of memorable ideas from influential people, books and films.
-              </p>
-              <a class="card-read-more" href="blog-1-quotes.php" aria-label="Read article: My Favourite Quotes">Read article <span aria-hidden="true">→</span></a>
-            </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="blog-1-quotes.php">
-                  <img src="img/optimized/profile-avatar.webp" width="32" height="28" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
-                  <span class="author">Mukul Sharma</span>
-                </a>
+              <div class="card-body">
+                <div class="card-category-box"><div class="card-category"><p class="category"><?= blog_e($post['category']) ?></p></div></div>
+                <h3 class="card-title"><a href="<?= blog_e($postUrl) ?>"><?= blog_e($post['title']) ?></a></h3>
+                <p class="card-description"><?= blog_e($post['excerpt']) ?></p>
+                <a class="card-read-more" href="<?= blog_e($postUrl) ?>" aria-label="Read article: <?= blog_e($post['title']) ?>">Read article <span aria-hidden="true">→</span></a>
               </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
+              <div class="card-footer">
+                <div class="post-author"><a href="<?= blog_e($postUrl) ?>"><img src="img/optimized/profile-avatar.webp" width="32" height="28" alt="" class="avatar rounded-circle" loading="lazy" decoding="async"><span class="author">Mukul Sharma</span></a></div>
+                <div class="post-date"><span class="ion-ios-clock-outline" aria-hidden="true"></span> <?= (int) $post['reading_minutes'] ?> min</div>
               </div>
-            </div>
+            </article>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="blog-2-books.php"><img src="img/optimized/work-3.webp" width="720" height="450" alt="My favourite books article" class="img-fluid" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <p class="category">General</p>
-                </div>
-              </div>
-              <h3 class="card-title"><a href="blog-2-books.php">My Favourite Books</a></h3>
-              <p class="card-description">
-                Books that shaped how I think about technology, work, creativity and personal growth.
-              </p>
-              <a class="card-read-more" href="blog-2-books.php" aria-label="Read article: My Favourite Books">Read article <span aria-hidden="true">→</span></a>
-            </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="blog-2-books.php">
-                  <img src="img/optimized/profile-avatar.webp" width="32" height="28" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
-                  <span class="author">Mukul Sharma</span>
-                </a>
-              </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="blog-3-tools.php"><img src="img/optimized/post-3.webp" width="720" height="479" alt="Web development tools article" class="img-fluid" loading="lazy" decoding="async"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <p class="category">Web Design</p>
-                </div>
-              </div>
-              <h3 class="card-title"><a href="blog-3-tools.php">Tools for Web Development</a></h3>
-              <p class="card-description">
-                A practical selection of tools that improve productivity and make web development faster.
-              </p>
-              <a class="card-read-more" href="blog-3-tools.php" aria-label="Read article: Tools for Web Development">Read article <span aria-hidden="true">→</span></a>
-            </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="blog-3-tools.php">
-                  <img src="img/optimized/profile-avatar.webp" width="32" height="28" alt="" class="avatar rounded-circle" loading="lazy" decoding="async">
-                  <span class="author">Mukul Sharma</span>
-                </a>
-              </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
+      <div class="blog-more-wrap"><a class="blog-more-link" href="blogs/">More reads <span aria-hidden="true">→</span></a></div>
     </div>
   </section>
   <!--/ Section Blog End /-->

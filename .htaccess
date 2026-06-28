@@ -1,4 +1,9 @@
 Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^blogs/([a-z0-9-]+)/?$ blogs/post.php?slug=$1 [L,QSA]
+</IfModule>
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/x-javascript application/json application/xml image/svg+xml
 </IfModule>
