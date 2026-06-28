@@ -47,7 +47,7 @@ cms_layout_start($id ? 'Edit blog' : 'Add blog', 'editor');
       <section class="cms-panel">
         <h2>Cover image</h2>
         <?php if ($post['image_path']): ?><img class="cms-cover-preview" src="../<?= blog_e($post['image_path']) ?>" alt="Current cover image"><?php endif; ?>
-        <div class="cms-field"><label for="image">Upload image</label><input id="image" type="file" name="image" accept="image/jpeg,image/png,image/webp"><small>JPG, PNG or WebP, max 5 MB. Saved as optimized WebP.</small></div>
+        <div class="cms-field"><label for="image">Upload image</label><input id="image" type="file" name="image" accept="image/jpeg,image/png,image/webp"><small>JPG, PNG or WebP, max 5 MB. Optimized to WebP when supported by the server.</small></div>
         <div class="cms-field"><label for="image_alt">Image description</label><input id="image_alt" name="image_alt" value="<?= blog_e($post['image_alt']) ?>" maxlength="220" required></div>
       </section>
     </aside>

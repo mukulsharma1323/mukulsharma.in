@@ -287,10 +287,39 @@ function blog_upload_image(array $file): string
     if (!in_array($mime, ['image/jpeg', 'image/png', 'image/webp'], true)) {
         throw new RuntimeException('Only JPG, PNG and WebP images are allowed.');
     }
-    $contents = file_get_contents((string) $file['tmp_name']);
-    $source = $contents !== false ? imagecreatefromstring($contents) : false;
-    if (!$source) {
+    $tmpName = (string) $file['tmp_name'];
+    if (@getimagesize($tmpName) === false) {
         throw new RuntimeException('The uploaded image could not be processed.');
+    }
+
+    if (!is_dir(BLOG_UPLOAD_DIR) && !mkdir(BLOG_UPLOAD_DIR, 0775, true) && !is_dir(BLOG_UPLOAD_DIR)) {
+        throw new RuntimeException('Upload directory is not writable.');
+    }
+
+    $basename = date('Ymd-His') . '-' . bin2hex(random_bytes(5));
+    $canCreateImage = function_exists('imagecreatefromstring');
+    $canSaveWebp = function_exists('imagewebp');
+    $contents = $canCreateImage ? file_get_contents($tmpName) : false;
+    $source = $contents !== false ? @imagecreatefromstring($contents) : false;
+
+    // Some GD installations (including common XAMPP builds) do not include
+    // WebP support. In that case, retain the validated original image instead
+    // of failing the whole blog-post save.
+    if (!$source || !$canSaveWebp) {
+        if ($source) {
+            imagedestroy($source);
+        }
+        $extensions = [
+            'image/jpeg' => 'jpg',
+            'image/png' => 'png',
+            'image/webp' => 'webp',
+        ];
+        $filename = $basename . '.' . $extensions[$mime];
+        $destination = BLOG_UPLOAD_DIR . '/' . $filename;
+        if (!move_uploaded_file($tmpName, $destination)) {
+            throw new RuntimeException('Unable to save the uploaded image.');
+        }
+        return 'img/blog/uploads/' . $filename;
     }
 
     $width = imagesx($source);
@@ -307,10 +336,7 @@ function blog_upload_image(array $file): string
         $source = $resized;
     }
 
-    if (!is_dir(BLOG_UPLOAD_DIR) && !mkdir(BLOG_UPLOAD_DIR, 0775, true) && !is_dir(BLOG_UPLOAD_DIR)) {
-        throw new RuntimeException('Upload directory is not writable.');
-    }
-    $filename = date('Ymd-His') . '-' . bin2hex(random_bytes(5)) . '.webp';
+    $filename = $basename . '.webp';
     $destination = BLOG_UPLOAD_DIR . '/' . $filename;
     if (!imagewebp($source, $destination, 80)) {
         imagedestroy($source);
